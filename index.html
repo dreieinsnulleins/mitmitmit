@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for mít</title>
+    <style>
+        :root {
+            --bg-color: #fdf6f6;
+            --text-color: #555;
+            --accent-color: #e8a7a7;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main-button {
+            background-color: white;
+            border: 1px solid var(--accent-color);
+            padding: 40px 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            max-width: 500px;
+            width: 90%;
+            margin-bottom: 20px;
+        }
+
+        .main-button:hover { transform: translateY(-5px); }
+
+        .main-button h1 {
+            font-weight: 300;
+            font-size: 1.5rem;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        #letter-content {
+            display: none;
+            line-height: 1.8;
+            margin: 20px 0;
+            max-width: 550px;
+            text-align: left;
+            white-space: pre-line;
+            font-size: 1rem;
+            animation: fadeIn 1s ease;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        }
+
+        .small-button {
+            background: none;
+            border: none;
+            color: var(--accent-color);
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 30px;
+        }
+
+        #photo-gallery {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 900px;
+            animation: fadeIn 1s ease;
+        }
+
+        .photo-card {
+            background: white;
+            padding: 10px 10px 30px 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border-radius: 2px;
+            transition: transform 0.3s;
+        }
+
+        .photo-card:hover { transform: scale(1.02); }
+
+        .photo-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        footer {
+            margin-top: 50px;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-button" onclick="toggleLetter()">
+        <h1 id="button-text">a letter for mít</h1>
+    </div>
+
+    <div id="letter-content">
+        gửi mít của anhhh,
+
+        happy valentine’s day!!!
+
+        cún gửi mít 1 chiếc online letter siêu đáng iu này và nào anh gặp mít sẽ có 1 bất ngờ nhỏ nhỏ xinh xinh cho em nhéee.
+
+        dù cho mình đang xa nma anh sắp về với em bé của anh òiiii. em bé à, anh mún em biết là, dù có ở đâu thì em vẫn chiếm trọn trái tim anh.
+
+        em có biết là mỗi lần anh đi học, hay là chỉ cần ra khỏi phòng thoi, đi trên những con đường mình hồi trước nắm tay, nói đủ thứ chuyện, lại làm anh nhớ đến em, nhớ em siêu nhiều.
+
+        càng gần đến ngày gặp em, thì anh lại càng mong thời gian trôi nhanh hơn xíu, mà đúng là phải mong nhanh hơn xíu để mình dc bên nhau, sớm thoi.
+
+        mít đáng iu của anh à, anh yêu em, anh chỉ yêu em, dù cho mình đang ở sg hay là hn, trong tim anh vẫn luôn chỉ có mình em. mong rằng khi yêu xa này, em và anh luôn tin tưởng và đồng hành cùng nhau nhé.
+
+        anh sẽ cố gắng thật nhiều, để sau này dc sớm về bên em.
+
+        cũng chả biết viết gì nhiều, chỉ mong là tình của mình đi mãi, giờ là 6 tháng, r sẽ tới 1 năm, 2 năm, và nhiều năm sau nữa, để mình có thật nhiều kỉ niệm cùng nhau, để có thật nhiều valentine, thật nhiều anni bên nhau nữa.
+
+        anh yêu em, chỉ yêu em, và mãi yêu em.
+
+        cún của em
+    </div>
+
+    <button class="small-button" onclick="togglePhotos()">show our memories</button>
+
+    <div id="photo-gallery">
+        <div class="photo-card"><img src="IMG_0241.PNG"></div>
+        <div class="photo-card"><img src="IMG_0267.PNG"></div>
+        <div class="photo-card"><img src="IMG_0306.PNG"></div>
+        <div class="photo-card"><img src="IMG_0310.PNG"></div>
+        <div class="photo-card"><img src="IMG_0318.PNG"></div>
+        <div class="photo-card"><img src="IMG_0356.PNG"></div>
+        <div class="photo-card"><img src="IMG_0395.PNG"></div>
+        <div class="photo-card"><img src="IMG_0404.PNG"></div>
+        <div class="photo-card"><img src="IMG_0432.PNG"></div>
+        <div class="photo-card"><img src="IMG_0440.PNG"></div>
+        <div class="photo-card"><img src="IMG_3448.JPEG"></div>
+        <div class="photo-card"><img src="IMG_3469.JPEG"></div>
+        <div class="photo-card"><img src="IMG_4659.JPG"></div>
+        <div class="photo-card"><img src="IMG_4800.JPG"></div>
+        <div class="photo-card"><img src="IMG_4838.JPG"></div>
+        <div class="photo-card"><img src="IMG_4901.JPG"></div>
+        <div class="photo-card"><img src="IMG_4965.JPG"></div>
+        <div class="photo-card"><img src="IMG_4995.JPG"></div>
+    </div>
+
+    <footer>september 2025</footer>
+
+    <script>
+        function toggleLetter() {
+            const letter = document.getElementById('letter-content');
+            const btnText = document.getElementById('button-text');
+            if (letter.style.display === 'none' || letter.style.display === '') {
+                letter.style.display = 'block';
+                btnText.innerText = 'close letter';
+            } else {
+                letter.style.display = 'none';
+                btnText.innerText = 'a letter for mít';
+            }
+        }
+
+        function togglePhotos() {
+            const gallery = document.getElementById('photo-gallery');
+            gallery.style.display = (gallery.style.display === 'none' || gallery.style.display === '') ? 'grid' : 'none';
+        }
+    </script>
+</body>
+</html>
